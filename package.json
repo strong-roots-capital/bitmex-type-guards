@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/bitmex-type-guards",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Type-guards for Bitmex API objects",
   "main": "dist/src/bitmex-type-guards.js",
   "types": "dist/src/bitmex-type-guards.d.ts",
