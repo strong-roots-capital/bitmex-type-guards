@@ -11,14 +11,27 @@ npm install @strong-roots-capital/bitmex-type-guards
 ## Use
 
 ```typescript
-import { bitmexTypeGuards } from '@strong-roots-capital/bitmex-type-guards'
-// TODO: describe usage
+import is from '@strong-roots-capital/bitmex-type-guards'
+
+const promise = bitmex.Order.new({
+    symbol: tradepair,
+    side: 'Buy',
+    orderQty: 100,
+    ordType: 'Limit',
+    price: 10000,
+    execInst: 'ParticipateDoNotInitiate'
+})
+
+promise.then(order => console.log(is.order(order)))
+//=> true
 ```
 
-## Related
+## Supported Type-Guards
 
-TODO
+- [X] Order
+
+More to come as they prove useful. Pull-requests welcome.
 
 ## Acknowledgments
 
-TODO
+- [@sindresorhus/is](https://github.com/sindresorhus/is)
